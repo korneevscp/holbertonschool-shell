@@ -1,2 +1,4 @@
 #!/bin/bash
-echo "${PATH//:/$'\n'}" | wc -l
+count=$(echo $PATH | tr ':' '\n' | wc -l)
+echo $count
+
